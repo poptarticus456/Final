@@ -6,14 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ListView
-        android:id="@android:id/list"
-        android:layout_width="match_parent"
-        android:layout_height="558dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:entries="@array/MyFavesCategories"
-        android:scrollbars="vertical" />
 
     <TextView
         android:id="@+id/textView"
@@ -21,21 +13,30 @@
         android:layout_height="wrap_content"
         android:layout_above="@android:id/list"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="35dp"
         android:text="MyFaves"
         android:textColor="@color/colorAccent"
-        android:textSize="30sp"
-        android:layout_marginBottom="35dp"
-        android:layout_marginTop="20dp"/>
+        android:textSize="30sp" />
 
     <Button
         android:id="@+id/editMyFaves"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Edit MyFaves"
-        android:layout_toRightOf="@+id/textView"
-        android:layout_above="@android:id/list"
-        android:layout_marginBottom="30dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:layout_toRightOf="@+id/textView"
+        android:text="Edit MyFaves" />
+
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/editMyFaves"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:entries="@array/MyFavesCategories"/>
 
 </RelativeLayout>

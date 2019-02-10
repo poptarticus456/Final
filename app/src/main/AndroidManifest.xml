@@ -20,6 +20,9 @@
         </activity>
         
         <activity android:name=".manageMyFaves"/>
+        <activity android:name=".TitleActivityList"/>
+        <activity android:name=".DetailsViewActivity"/>
+        <activity android:name=".WebViewActivity"/>
 
     </application>
 </manifest>

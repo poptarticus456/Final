@@ -1,33 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
         android:text="Manage My Favorites"
         android:textColor="@color/colorAccent"
-        android:textSize="30sp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"/>
+        android:textSize="30sp" />
 
     <Button
         android:id="@+id/buttonDelete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Del"
+        android:layout_below="@+id/textView2"
         android:layout_toLeftOf="@+id/textView2"
-        android:layout_below="@+id/textView2"/>
+        android:onClick="deleteButtonClicked"
+        android:text="Del" />
 
     <Button
         android:id="@+id/buttonAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add"
+        android:layout_below="@+id/textView2"
         android:layout_toRightOf="@+id/textView2"
-        android:layout_below="@+id/textView2"/>
+        android:onClick="addButtonClicked"
+        android:text="Add" />
 
     <TextView
         android:id="@+id/textView3"
@@ -45,9 +47,9 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/buttonAdd"
+        android:layout_marginLeft="10dp"
         android:layout_toRightOf="@+id/textView3"
-        android:entries="@array/MyFavesCategories"
-        android:layout_marginLeft="10dp"/>
+        android:entries="@array/MyFavesCategories" />
 
     <TextView
         android:id="@+id/textView4"
@@ -123,7 +125,7 @@
         android:layout_marginTop="20dp">
 
         <TextView
-            android:id="@+id/listTextView"
+            android:id="@+id/displayTextView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="ListView"

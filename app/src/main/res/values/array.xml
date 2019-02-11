@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    
+
     <string-array name="MyFavesCategories">
 
         <item>Movies</item>
@@ -11,6 +11,6 @@
         <item>Recipes</item>
 
     </string-array>
-    
-    
+
+
 </resources>

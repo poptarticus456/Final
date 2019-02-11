@@ -15,7 +15,7 @@ public class manageMyFaves extends Activity {
     EditText detailsEditText;
     EditText urlEditText;
     TextView displayTextView;
-    MyDBHandler dbHandler;
+    DatabaseHandler dbHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +31,7 @@ public class manageMyFaves extends Activity {
         urlEditText = (EditText) findViewById(R.id.urlEditText);
         displayTextView = (TextView) findViewById(R.id.displayTextView);
 
-        dbHandler = new MyDBHandler(this, null, null, 1);
+        dbHandler = new DatabaseHandler(this);
         printDatabase();
 
     }
@@ -51,6 +51,7 @@ public class manageMyFaves extends Activity {
                 " " + urlEditText.getText().toString());
         dbHandler.addMyFave(myfaves);
         printDatabase();
+        finish();
     }
 
     public void deleteButtonClicked(View view) {
